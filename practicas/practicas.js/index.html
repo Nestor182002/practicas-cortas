@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>practica</title>
+</head>
+
+<style>
+	#contenedor{
+		width: 50%;
+	}
+	
+	#contenedor #contenedor-compu{
+		padding: 20px;
+		display: inline-block;
+	}
+	#contenedor #contenedor-celular{
+		padding: 20px;
+		display: inline-block;
+	}
+	#contenedor #contenedor-portatil{
+		padding: 20px;
+		display: inline-block;
+	}
+
+	#contenedor #contenedor-compu #computador{
+		padding: 20px;
+		cursor: pointer;
+		background-color: red;
+	}
+	#contenedor #contenedor-celular #celular{
+		padding: 20px;
+		cursor: pointer;
+		background-color: red;
+	}
+	#contenedor #contenedor-portatil #portatil{
+		padding: 20px;
+		cursor: pointer;
+		background-color: red;
+	}
+
+	#productos{
+		padding: 20px;
+		float: right;
+	}
+	display: inline-block;
+
+	#productos span{
+		padding: 20px;
+		background-color: green;
+	}
+
+</style>
+
+<body>
+
+	<div id="contenedor" name="container">
+		<div id="contenedor-compu" class="portador">
+			<span id="computador" class="filtros" name="computador">computador</span>
+		</div>
+		<div id="contenedor-celular" class="portador" name="portador">
+			<span id="celular" class="filtros" name="celular">celular</span>
+		</div>
+		<div id="contenedor-portatil" class="portador" name="portador">
+			<span id="portatil" class="filtros" name="portatil">portatil</span>
+		</div>
+
+	</div>
+	
+	<div id="contenedor-2">
+		<div id="productos"><span class="productos" name="computador">computador</span></div>
+		<div id="productos"><span  class="productos" name="celular" >celular</span></div>
+		<div id="productos"><span  class="productos" name="portatil" >portatil</span></div>
+		<div id="productos"><span  class="productos" name="computador" >computador</span></div>
+		<div id="productos"><span  class="productos" name="celular" >celular</span></div>
+		<div id="productos"><span  class="productos" name="portatil" >portatil</span></div>
+	</div>
+
+	<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>

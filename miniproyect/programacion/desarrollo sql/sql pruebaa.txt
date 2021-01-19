@@ -1,0 +1,28 @@
+create table productos(
+id_producto int not null auto_increment,
+primary key(id_producto),
+nombre varchar(200),
+precio int
+);
+
+create table clientes(
+id_cliente int not null auto_increment,
+primary key(id_cliente),
+nombre varchar(150),
+apellido varchar(150),
+edad int,
+telefono int
+)
+
+
+create table pedidos(
+id_pedido int not null auto_increment,
+primary key(id_pedido),
+fecha date,
+cantidad int,
+id_cliente int,
+id_producto int,
+foreign key(id_cliente) references clientes(id_cliente),
+foreign key(id_producto) references productos(id_producto),
+
+)

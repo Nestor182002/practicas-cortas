@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>despegable</title>
+
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		#header{
+			margin:auto;
+			width: 500px;
+			font-family: arial,helvatica,sans-serif;
+		}
+		ul li{
+			list-style: none;
+		}
+		.nav li a{
+			background-color:#d7dfdf;
+			color: #33bec2;
+			text-decoration: none;
+			padding: 10px 15px;
+			display: block;
+			border: 1px solid #33bec2;
+		}
+		.nav li a:hover{
+			color: #adbdbd;
+		}
+		.nav>li{
+			float: left;
+		}
+		.nav li a:hover{
+			background-color: #434343;
+		}
+		.nav>li ul{
+				display:none ;
+				position: absolute;
+				min-width: 
+		}
+		.nav li:hover>ul{
+			display: block;
+		}
+		.nav li ul li{
+			position: relative;
+		}
+		.nav li ul li ul{
+			right: -130px;
+			top:0px;
+		}
+		
+
+	</style>
+</head>
+<body>
+
+<div id="header">
+	<ul class="nav">
+		<li class="decoration"><a href="#">inicio</a></li>
+
+		<li class="decoration"><a href="#">sobre</a>
+			<ul>
+				<li><a href="#">sobre mi</a></li>
+				<li><a href="#">sobre tu</a></li>
+				<li><a href="#">sobre ustedes</a>
+					<ul>
+				<li><a href="#">sobre mi</a></li>
+				<li><a href="#">sobre tu</a></li>
+				<li><a href="#">sobre ustedes</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+
+		<li class="decoration"><a href="#">informacion</a>
+			<ul>
+				<li><a href="#">sobre mi</a></li>
+				<li><a href="#">sobre tu</a></li>
+				<li><a href="#">sobre ustedes</a></li>
+			</ul>
+			
+		<li class="decoration"><a href="#">contacto</a></li>		
+	</ul>
+</div>
+
+
+</body>
+</html>

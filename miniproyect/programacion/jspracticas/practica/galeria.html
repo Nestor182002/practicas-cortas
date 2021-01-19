@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>galeria</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+	<style type="text/css">
+		*{
+			font-family: 'Raleway', sans-serif;
+			box-sizing: border-box;
+			margin: 0px;
+			padding: 0;
+		}
+		h1{
+			font-weight: 400;
+			text-align: center;
+			padding: 20px 0;
+			font-size: 40px;
+		}
+		.linea{
+			background: #550b51;
+			height: 5px;
+			width: 100%;
+			display: block;
+		}
+		.galeria{
+			display: grid;
+			grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+			width: 95%;
+			margin: auto;
+			grid-gap: 10px;
+			padding: 40px 0;
+			overflow: hidden;
+		}
+		.galeria img{
+			width: 100%;
+			vertical-align: top;
+			height: 300px;
+			object-fit: cover;
+			transition: transform 0.5s; 
+		}
+		.galeria > a{
+			 display: block;
+			 position: relative;
+			 overflow: hidden;
+			 box-shadow: 0 0 6px rgba(0,0,0,.5)
+		}
+
+		.galeria a:hover img{
+			filter: blur(2px);
+			transform: rotate(10deg) scale(1.3);
+		}
+
+		.light-box{
+			position: fixed;
+			top:0;
+			left: 0;
+			background:rgba(0,0,0,0.5);
+			width: 100%;
+			transition:transform 0.5s;
+			z-index: 1000;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			transform: scale(0);
+			
+		}
+		.light-box img{
+			width: 75vw;
+			max-height: 70vh;
+		}
+		.light-box:target{
+			transform: scale(1);
+		}
+		.close{
+			display: block;
+			position: absolute;
+			top:40px;
+			right: 40px;
+			background: #851919;
+			color: #fff;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Galeria de imagenes</h1>
+	<span class="linea"></span>
+	<section class="galeria">
+		<a href="#imagen1" >
+			<img src="./img/bg.jpeg"></a>
+		<a href="#imagen2">
+			<img src="./img/jellyfish.jpg"></a>
+		<a href="#imagen3" >
+			<img src="./img/Koala.jpg"></a>
+		<a href="#imagen4" >
+			<img src="./img/lighthouse.jpg"></a>
+		<a href="#imagen5" >
+			<img src="./img/planta.jpg"></a>
+		<a href="#imagen6" >
+			<img src="./img/captura.PNG"></a>
+		
+	</section>
+
+	<article class="light-box" id="imagen1">
+			<a href="" class="next"><i class="fas fa-arrow-left"></i></a>
+			<img src="./img/bg.jpeg">
+			<a href="" class="next"></a><i class="fas fa-arrow-right"></i>
+			<a href="" class="close">X</a>
+
+	</article>
+	<article class="light-box" id="imagen2">
+			<a href="" class="next"><i class="fas fa-arrow-left"></i></a>
+			<img src="./img/jellyfish.jpg">
+			<a href="" class="next"></a><i class="fas fa-arrow-right"></i>
+			<a href="" class="close">X</a>
+
+	</article>
+	<article class="light-box" id="imagen3">
+			<a href="" class="next"><i class="fas fa-arrow-left"></i></a>
+			<img src="./img/Koala.jpg">
+			<a href="" class="next"></a><i class="fas fa-arrow-right"></i>
+			<a href="" class="close">X</a>
+
+	</article>
+	<article class="light-box" id="imagen4">
+			<a href="" class="next"><i class="fas fa-arrow-left"></i></a>
+			<img src="./img/lighthouse.jpg">
+			<a href="" class="next"></a><i class="fas fa-arrow-right"></i>
+			<a href="" class="close">X</a>
+
+	</article>
+	<article class="light-box" id="imagen5">
+			<a href="" class="next"><i class="fas fa-arrow-left"></i></a>
+			<img src="./img/planta.jpg">
+			<a href="" class="next"></a><i class="fas fa-arrow-right"></i>
+			<a href="" class="close">X</a>
+
+	</article>
+	<article class="light-box" id="imagen6">
+			<a href="" class="next"><i class="fas fa-arrow-left"></i></a>
+			<img src="./img/captura.PNG">
+			<a href="" class="next"></a><i class="fas fa-arrow-right"></i>
+			<a href="" class="close">X</a>
+
+	</article>
+</body>
+
+
+</html>

@@ -1,0 +1,4 @@
+update facultad
+set codfac='100',
+nomfac='ingenieria',
+numprog='0'

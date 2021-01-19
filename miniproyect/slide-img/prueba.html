@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>slide-img</title>
+	<link rel="stylesheet" type="text/css" href="prueba.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<!--imagen slider comienzo-->
+	<div class="deslizador-slider">
+		<div class="diapositivas-slides">
+			<!--radio botones start-->
+			<input type="radio" name="radio-btn" id="radio1">
+			<input type="radio" name="radio-btn" id="radio2">
+			<input type="radio" name="radio-btn" id="radio3">
+			<input type="radio" name="radio-btn" id="radio4">
+			<!--radio botones end-->
+
+			<!--slide imagenes start-->
+			<div class="slide one">
+				<img src="1.jpg">
+			</div>
+			<div class="slide">
+				<img src="2.jpg">
+			</div>
+			<div class="slide">
+				<img src="3.jpg">
+			</div>
+			<div class="slide">
+				<img src="4.jpg">
+			</div>
+
+			<!--slide imagenes ends-->
+
+			<!--navegacion automatica start-->
+			<div class="navegacion-auto">
+				<div class="auto-btn1"></div>
+				<div class="auto-btn2"></div>
+				<div class="auto-btn3"></div>
+				<div class="auto-btn4"></div>
+
+			</div>	
+		<!--navegacion automatica end-->
+		</div>
+		<!--manual navegacion start-->
+
+		<div class="manual-navegation">
+			<label for="radio1" class="manual-btn"></label>
+			<label for="radio2" class="manual-btn"></label>
+			<label for="radio3" class="manual-btn"></label>
+			<label for="radio4" class="manual-btn"></label>
+		</div>
+
+		<!--manual navegacion end-->
+
+
+	</div>
+
+	<!--imagen slider end-->
+
+<script type="text/javascript">
+	var contador=1;
+	setInterval(()=>{
+		document.getElementById('radio'+ contador).checked=true;
+		contador++;
+		if (contador>4) {
+			contador=1;
+		}
+	},4000)
+</script>
+</body>
+</html>

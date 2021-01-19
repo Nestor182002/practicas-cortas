@@ -1,0 +1,39 @@
+<html>
+<body>
+
+<input type="text" id="n1" placeholder="Digite n1">
+<input type="text" id="n2" placeholder="Digite n2">
+<input type="text" id="suma" readonly placeholder="Valor Suma" >
+<button onclick="suma()">Calcular</button>
+<button onclick="limpiar()">Limpiar</button>
+
+<script>
+
+var elementon1=document.getElementById("n1");
+var elementon2=document.getElementById("n2");
+var elementosuma=document.getElementById("suma");
+
+
+function suma(){
+let n1=parseInt(elementon1.value);
+let n2=parseInt(elementon2.value);
+let suma=n1+n2;
+elementosuma.value=suma;
+}
+
+function limpiar(){
+	elementon1.value="";
+	elementon2.value="";
+	elementosuma.value="";
+	elementon1.focus();
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

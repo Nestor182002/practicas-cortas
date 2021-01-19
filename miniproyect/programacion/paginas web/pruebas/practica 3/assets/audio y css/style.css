@@ -1,0 +1,25 @@
+*{
+margin: 0 auto;
+font-family: arial;
+ }
+	    
+a{
+	width: 100px;
+	height: 100px;
+	padding: 30px;
+	text-decoration: none;
+	background-color: green;
+	color: white;
+}
+
+a:link{
+	background-color: ;
+}
+
+a:visited{
+	background-color: yellow;
+}
+a:hover{
+	background-color: black;
+
+}

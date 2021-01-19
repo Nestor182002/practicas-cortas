@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+*{
+	margin: 0 auto;
+}
+body{
+	margin: 4%;
+
+}
+
+input{
+	width: 100%;
+	margin-bottom: 20px;
+
+}
+</style>	
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  var y = document.getElementById("fname2");
+  y.value = x.value.toUpperCase();
+ //x.value=x.value.toLowerCase();
+}
+</script>
+</head>
+<body>
+
+Digite el Nombre: <input type="text" id="fname" onkeydown="myFunction()">
+Salida: <input type="text" id="fname2">
+
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+//const libro=Object.create(clase llamada);//forma
+//mas facil de crear objeto pero se tienen que hacer las 
+//propiedades
+
+class libro{
+	constructor(titulo,autor,year){
+		this.titulo=titulo;
+		this.autor=autor;
+		this.year=year;
+	}
+
+	getResumen(){//agregar metodo
+		return this.titulo+" fue escrito por "+this.autor;
+	}
+
+	revisado(newYear){//modificado como prototype
+		this.year=newYear;
+		this.modificado=true;
+	}
+	static ejemplodeunmetodoestatico(){
+		return "prueba de un metodo estatico.";
+	}
+}
+//una sub clase
+class revista extends libro{
+	constructor(titulo,autor,year,mes){
+		super(titulo,autor,year);
+		this.mes=mes;
+	}
+}
+
+
+
+//instancia de la clase libro
+const libro1=new libro("libro1","grove","2015");
+console.log(libro1);
+console.log(libro1.getResumen());
+
+
+libro1.revisado("2013");//de revisado-modificacion
+console.log(libro1);
+
+console.log(libro.ejemplodeunmetodoestatico());//se llama con la clase
+
+//instancia de la clase revista
+const revista1=new revista("revista1","marta","2000","10");
+console.log(revista1)
+console.log(revista1.getResumen());

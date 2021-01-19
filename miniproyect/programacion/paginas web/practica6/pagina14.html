@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+
+#caja{	
+background-color:#D94A38;
+width:120px;
+height:20px;
+padding:20px 40px 40px 40px;
+color:white;
+}
+
+
+
+</style>	
+
+<div id="caja" onmouseover="mOver(this)" onmouseout="mOut(this)" 
+>
+<center><p>Caja de Prueba</p></center>
+</div>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML ="";
+  obj.innerHTML = "<center><p>Gracias</p></center>"
+}
+
+function mOut(obj) {
+  obj.innerHTML ="";
+  obj.innerHTML = "<center><p>Pasa el Mouse</p></center>"
+}
+</script>
+
+</body>
+</html> 
+

@@ -1,0 +1,165 @@
+
+   		*{
+   			margin: 0px;
+   			padding: 0px;
+   			font-family: Arial,Helvetica,sans-serif;
+     	}
+
+     	body{
+     		margin:0 auto;
+     	}
+
+     	header{    
+
+     		padding: 10px;
+     		background-color: #001E3A;
+     		color:#FFF;
+     		height: 180px;
+     		background-image: url("../../assets/img/banners.png");
+     		background-repeat: no-repeat;
+     		background-size: auto;   		
+
+     	}
+
+     	#titulobanner{
+
+     		margin-top: 80px;
+     		margin-left: 10px;
+     		font-size: 30px;
+     		color:#fff;
+
+     	}
+
+     	nav{
+
+     		background-color: #001E3A;
+     		/*border-bottom: 10px solid #37f; se quito border por el progreso */
+            /*superponer*/
+             z-index: 1;
+     	}
+
+     	ul li{
+     		
+            display: inline-block;
+            list-style-type: none;
+            padding: 30px 40px 30px 40px;
+     	}
+
+        ul li:hover{
+
+            background-color: #339FFF;
+            border-bottom: 20px solid yellow;
+            padding: 30px 40px 10px 40px;
+            transition: .5s;
+            -webkit-transition: .5s;
+            -moz-transition: .5s; 
+            -o-transition: .5s; 
+            -ms-transition: .5s;  
+        }
+
+        nav>ul>li:nth-child(1){
+            margin-left: 20px;
+        }
+
+        a{
+            text-decoration: none;
+            font-size:14px;
+            font-weight: bold;
+            color:white;
+        }
+
+        #titulo{
+
+            margin-top: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+
+        }
+
+        /*section{ se hizo cambio*/
+         #contenedor{   
+
+            margin: 5px;
+            padding: 10px;
+            display: inline-block;
+            text-align: justify;
+
+        }
+
+
+        #contenido{
+
+            width: 67%;
+            float: left;
+            margin-right: 2%;
+        }
+
+        #publicidad{
+
+            width: 31%;
+            float: left;
+        }
+
+        #articulo{
+
+            margin: 5px;
+            padding: 10px;
+            overflow: hidden;
+
+        }
+
+        .tituloart{
+
+            margin-top:20px;
+            margin-bottom: 20px;
+            text-align: center;
+
+        }
+        .imagen{
+            width: 100%;
+            height: 315px;
+
+        }
+
+        #articulo>p{
+
+            line-height: 2.0;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .titulopub{
+
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .video{
+
+            width: 100%;
+            height: 315px;
+            margin-top: 20px;
+
+        }
+
+        footer{
+
+            background-color: #001E3A;
+            color:white;
+            text-align: center;
+            font-size: 14px;
+            height: 100px;
+            padding-top:70px; 
+
+        }
+        
+
+        footer hr{
+
+            border:0;
+            height: 1px;
+            background-image:linear-gradient(to right, 
+                rgba(255,255,255,0),rgba(255,255,255,0.75),
+                rgba(255,255,255,0)); 
+        }
+

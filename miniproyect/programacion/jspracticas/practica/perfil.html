@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>perfil</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<style type="text/css">
+		*{
+			font-family: 'Raleway', sans-serif;
+			box-sizing: border-box;
+			margin: 0px;
+			padding: 0;
+
+		}
+		.barra{
+			background-color:  #6483ca;
+			display: block;
+			position: fixed;
+			width: 100%;	
+		}
+		.barra-img{
+			height: 35px;
+			width:  35px;
+			object-fit: cover;
+			padding-top: 7px;
+			padding-left: 5px;
+			padding-bottom: 2px;
+			border-radius: 9px;
+		}
+
+		.barra-input{
+			display: inline-flex;
+			flex-grow: 1;
+			position: absolute;
+			margin-left: 5px;
+			margin-top: 10px;
+			padding-right: 250px;
+			padding-bottom: 5px;
+			box-shadow: 0 0 6px rgba(0,0,0,.5);
+			
+			}
+			
+			.a1{
+				float: right;
+				padding: 13px;
+				font-size: 15px;
+				text-decoration: none;
+				color: #d3d9e8;
+				padding-left: 10px;
+				padding-right: 20px;
+
+			}
+			.a1:hover{
+				color: white;
+
+			}
+			.header{
+				background: -moz-linear-gradient(top, rgba(19,19,19,0.48) 0%, rgba(28,28,28,0.48) 0%, rgba(89,89,89,0.54) 12%, rgba(71,71,71,0.74) 50%, rgba(43,43,43,0.99) 98%, rgba(0,0,0,1) 100%);
+				width: 83.5%;
+				height: 50vh;
+				
+			}
+			.header-img{
+
+				height: 290px;
+				width: 200px;
+				padding-top: 100px;
+				padding-left: 10px;
+				object-fit: cover;
+				position: absolute;
+
+				}
+			
+			
+			#section3{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				list-style: none;
+				background-color: #eef1f8;
+				width: 100%;
+				margin-top:270px;
+				border-bottom: .1px solid #cccccf;
+				border-right: .1px solid #cccccf;			
+			}
+			#header-blanco a{
+				color: black;
+				text-decoration: none;
+			}
+
+			#header-blanco{
+				display: inline-block;				
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 40px;
+				padding-right: 40px;
+				border-left: 0.5px solid #b7b7b8;
+				
+			}
+			#header-blanco a:hover{
+				color:#6483ca ; 
+			}
+			#lista1 li{
+				list-style: none;
+			}
+			#lista1 li a{
+				text-decoration: none;
+				background:#eef1f8;
+				font-size: 15px;
+				border: 3px solid #eef1f8; 
+				box-shadow: 0 0 6px rgba(0,0,0,.5);
+				color: black;
+			}
+			
+			#portada{
+				float: right;
+				margin-top: 70px;
+				padding-right: 10px;
+			}
+			#informacion{
+				float: right;
+				margin-top: 170px;
+				width: 200px;
+				text-align: center;
+			}
+			#actividades{
+				float: right;
+				margin-top: 220px;
+			}
+			#perfil{
+				margin-top: 250px;
+				position: absolute;
+				margin-left: 25px;
+			}
+			#portada:hover{
+				color:#6483ca ; 
+			}
+			#informacion:hover{
+				color:#6483ca   ; 
+			}
+			#actividades:hover{
+				color:#6483ca;
+			}
+			#perfil:hover{
+				color:#6483ca;
+			}
+
+			main{
+				float: left;
+				width: 83%;
+				margin-top: 30px;
+				margin-left: 10px;
+				border-top: .1px solid #cccccf;
+				border-left: .1px solid #cccccf;
+				border-right: .1px solid #cccccf;
+				background-color:#d3d9e8 ; 
+			}
+			.main-article{
+				display: inline-block;
+				padding-right: 800px;
+				color:#6483ca;
+				padding-bottom: 20px;
+				background-color:#d3d9e8 ; 
+			}
+			.main-a{
+				text-decoration: none;
+				color:#6483ca;
+
+			}
+			.galeria{
+				display: grid;
+				grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+				grid-column-gap: 10px;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding-right: 15px;
+				background-color:#fff ;
+				border-bottom: .1px solid #cccccf;
+				padding-top: 10px;
+				padding-bottom: 10px; 
+			}
+			.galeria img{
+				height: 180px;
+				width: 180px;
+				object-fit: cover;
+			}
+			#aside{
+				background-color: #cccccf;
+				position: absolute;
+				margin-left:1155px;
+				width: 15%;
+				height: 310px;
+				font-size: 20px;
+				font-family: arial;
+				padding-top: 20px;
+							}
+
+	</style>
+			
+</head>
+<body>
+		<article class="barra">
+		<img class="barra-img" src="./img/planta.jpg">
+		<input class="barra-input" type="text" name="" placeholder="buscar,personas,lugares"> 
+		 <a class="a1" href="#">Salir▼</a>
+		 <a id="prueba" class="a1" href="#">✍</a>
+		 <a class="a1" href="#">ƒ</a> 
+		 <a class="a1" href="#">buscar amigos</a>
+		 <a class="a1" href="#">multimedia</a>
+		 <a class="a1" href="#">inicio</a>
+		 </article>
+
+		<header class="header">
+			<h3 class="h3">Koala Name</h3>
+			<img class="header-img" src="./img/Koala.jpg">
+			<section id="section2">
+			<ul id="lista1">
+			<li><a id="portada" href="#">Añadir foto de portada</a></li>
+			<li><a id="perfil" href="#">Añadir una foto de perfil</a></li>
+			<li><a id="informacion" href="#">Actualizar informacion</a></li>
+			<li><a id="actividades" href="#">Registro de actividades</a></li>
+				</section>
+				<article id="section3">
+			<li id="header-blanco"><a href="#">Mi biografia</a></li>
+			<li id="header-blanco"><a href="#">informacion</a></li>
+			<li id="header-blanco"><a href="#">Amigos</a></li>
+			<li id="header-blanco"><a href="#">Mas▼</a></li>
+			<li id="header-blanco"></ul>
+				</article>
+		</header>	
+	
+	<main class="main">
+		<article class="main-article"><p>Personas que quizas conozcas</p></article>
+		<a class="main-a" href="#">Ver todas</a>
+		<section class="galeria">
+		<a href="#imagen1" >
+			<img src="./img/bg.jpeg"></a>
+		<a href="#imagen2">
+			<img src="./img/jellyfish.jpg"></a>
+		<a href="#imagen3" >
+			<img src="./img/Koala.jpg"></a>
+		<a href="#imagen4" >
+			<img src="./img/lighthouse.jpg"></a>
+		<a href="#imagen5" >
+			<img src="./img/planta.jpg"></a>
+		<a href="#imagen6" >
+			<img src="./img/captura.PNG"></a>
+		
+	</section>
+	</main>
+	<aside id="aside">
+		<p>prueba</p>
+		<p>prueba</p>
+		<p>prueba</p>
+		<p>prueba</p>
+		<p>prueba</p>
+		<p>prueba</p>
+		<p>prueba</p>
+		<p>prueba</p>
+	</aside>
+	<footer>
+		
+	</footer>
+</body>
+</html>

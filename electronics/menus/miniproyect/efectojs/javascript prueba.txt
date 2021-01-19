@@ -1,0 +1,203 @@
+class product {
+	constructor(nombre, valor, año) {
+		this.nombre = nombre;
+		this.valor = valor;
+		this.año = año;
+	}
+
+}
+class UI {
+	addDatos(productos) {
+		const productslist = document.getElementById('contenedor-grupo');
+		const element = document.createElement('div');
+		element.innerHTML = `           
+                <div class="card-body">
+                    <strong>Product</strong>: ${productos.nombre} 
+                    <strong>Price</strong>: ${productos.valor}  
+                    <strong>Year</strong>: ${productos.año}
+                    <a href="#" class="btn btn-danger" name="delete">Delete</a>
+                </div>     
+        `;
+		productslist.appendChild(element);
+
+	}
+
+	resetform(){
+		document.getElementById("form").reset();
+	}
+
+	borrarDatos(element) {
+		if (element.name==='delete') {
+			element.parentElement.parentElement.remove();
+			this.mensaje('producto eliminado');
+		}
+
+	}
+
+	mensaje(mensajes){
+		const div=document.createElement('div');
+		div.className='alert';
+		div.appendChild(document.createTextNode(mensajes));
+
+		const contenedor=document.getElementById('contenedor');
+		const form=document.getElementById('form');
+		contenedor.insertBefore(div,form);//inserto el div antes del form
+		setTimeout(function(){
+			document.querySelector('.alert').remove();
+		},3000);
+	}
+}
+
+//dom events
+
+document.getElementById('form')
+	.addEventListener('submit', function(e) {
+		const nombre = document.getElementById('nombre').value;
+		const valor = document.getElementById("valor").value;
+		const año = document.getElementById("año").value;
+
+
+		const productos = new product(nombre, valor, año);
+
+		
+		const ui = new UI();
+		ui.addDatos(productos);
+
+		ui.resetform();
+
+		ui.mensaje("que onda");
+
+		if(nombre ==='' || valor ==='' || año ===''){
+			return ui.mensaje("faltan datos por favor");
+		}
+
+		e.preventDefault();
+	})
+
+//dom events delete
+document.getElementById("contenedor-grupo")
+.addEventListener('click',function(e){
+
+const ui=new UI();
+ui.borrarDatos(e.target)
+
+	})
+
+
+///scroll/////////////////////////////////////////////////////////////
+
+class metodo{
+	menupegajozo(){
+		var menu=document.getElementById('menu');
+		var altura=menu.offsetTop;
+		window.addEventListener('scroll',function() {
+			if (window.pageYOffset > altura) {
+				menu.classList.add('fixed');
+			}else{
+				menu.classList.remove('fixed');
+			}
+		})
+	}
+}
+
+var metodos=new metodo();
+
+metodos.menupegajozo()
+
+
+
+//presiono el checked/////////////////////////////////////////////////////////////////////
+
+function persona() {
+	let nombre = document.getElementById('nombre').value;
+	let seleccion = document.getElementById('seleccion');
+	var select;
+	
+	if (seleccion.checked) {
+		select = "SI";
+	} else {
+		select = "NO";
+	}
+	let alerta= document.getElementById('texto1').innerHTML=nombre;
+	document.getElementById('texto2').innerHTML=select;
+	alert("buenos dias "+nombre);
+};
+
+
+//////////////////////////////SCROLL2////////////////////////////////////////////////////////
+
+
+var btnMenu = document.querySelector('.btn-menu');
+let menu = document.querySelector('.list-container');
+let containerMenu = document.querySelector('.menu');
+let gotop=document.querySelector('.go-top')
+let activador = true;
+
+//click para mostrar elementos
+btnMenu.addEventListener('click',() =>{
+	btnMenu.classList.toggle('fa-times');
+
+	if (activador) {
+
+		menu.style.left = '0';
+		menu.style.transition = '0.5s';
+		activador=false;
+	}
+	else{
+		activador=false;
+		menu.style.left = '-100%';
+		menu.style.transition = '0.5s';
+		activador = true;
+	}
+	
+})
+//click para mostrar elementos
+
+
+//mostrar o quitar barra btn menu
+let afterscroll=window.pageYOffset;
+	
+	window.onscroll= () =>{
+		let beforescroll=window.pageYOffset;
+
+		if (afterscroll>beforescroll) {
+
+			containerMenu.style.top= '0';
+			containerMenu.style.transition = '0.5s';
+		}
+		else {
+			containerMenu.style.top= '-60px';
+			containerMenu.style.transition = '0.5s';
+		}
+
+		afterscroll=beforescroll;
+
+		//mostrar o quitar barra btn menu
+
+
+		//desaparecer flecha
+		let top=window.pageYOffset;
+
+		if (top <=600) {
+			gotop.style.right = '-60px'; 
+			gotop.style.transition = '0,5s';
+			containerMenu.style.borderBottom = '2px solid red';
+		}
+		else{
+			gotop.style.right = '0px';
+			containerMenu.style.borderBottom = 'none';
+		}
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+

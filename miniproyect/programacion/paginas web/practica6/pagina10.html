@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+
+		.prueba{
+			background-color: black;
+			color:white;
+		}
+		.prueba1{
+			background-color: red;
+			color:white;
+		}
+
+	</style>	
+</head>
+<body>
+
+<div id="demo" class="prueba1" onclick="cambioClase(0)">HOla</div>
+
+
+<script>
+	var cont=0;
+
+
+	function cambioClase(){
+	var element = document.getElementById("demo");
+	if(cont==0){	
+	//element.innerHTML="hola";
+	element.classList.remove("prueba1");
+	element.classList.add("prueba");
+	cont=1;
+   }
+   else if(cont==1){
+   	element.classList.add("prueba1");
+   	element.classList.remove("prueba");
+ 	cont=0;
+   }
+   console.log(cont);
+   }
+</script>
+
+</body>
+</html>
